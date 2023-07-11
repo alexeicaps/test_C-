@@ -56,20 +56,20 @@
 // 34, 5 -> не кратно, остаток 4 
 // 16, 4 -> кратно
 
-Console.WriteLine("Введите первое число: ");
-int a = int.Parse(Console.ReadLine());
+// Console.WriteLine("Введите первое число: ");
+// int a = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Введите второе число: ");
-int b = int.Parse(Console.ReadLine());
+// Console.WriteLine("Введите второе число: ");
+// int b = int.Parse(Console.ReadLine());
 
-if (a % b == 0)
-{
-    Console.WriteLine("1 число кратно второму");
-}
-else
-{
-    Console.WriteLine("второе число не кратно первому " + (a % b));
-}
+// if (a % b == 0)
+// {
+//     Console.WriteLine("1 число кратно второму");
+// }
+// else
+// {
+//     Console.WriteLine("второе число не кратно первому " + (a % b));
+// }
 
 
 // ------------------------------------------------------------------------------
@@ -81,22 +81,22 @@ else
 // 46 -> нет 
 // 161 -> да
 
-// void Multiply(int number1)
-// {
-//     if (number1 % 7 == 0 && number1 % 23 == 0)
-//     {
-//         Console.WriteLine("Данное число кратно и 7, и 23 одновременно");
-//     }
-//     else
-//     {
-//         Console.WriteLine("Данное число не кратно и 7, и 23 одновременно");
-//     }
-// }
+Console.WriteLine("Введите число: ");
+int number = int.Parse(Console.ReadLine());
 
-// Console.WriteLine("Введите число: ");
-// int number = int.Parse(Console.ReadLine());
+void Multiply(int number1)
+{
+    if (number1 % 7 == 0 && number1 % 23 == 0)
+    {
+        Console.WriteLine("Данное число кратно и 7, и 23 одновременно");
+    }
+    else
+    {
+        Console.WriteLine("Данное число не кратно и 7, и 23 одновременно");
+    }
+}
 
-// Multiply(number);
+Multiply(number);
 
 
 

@@ -54,4 +54,4 @@ int num2 = GetRandomNumber();
 // PrintNumber(num2);
 int firstDigit2 = GetFirstDigit(num2);
 int lastDigit2 = GetLastDigit(num2);
-ShowLargestDigit(firstDigit2, lastDigit2);
+ShowLargestDigit(firstDigit2, lastDigit2);  
