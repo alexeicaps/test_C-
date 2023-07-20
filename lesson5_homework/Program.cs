@@ -2,89 +2,52 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int sizeArray = GetNum("Type the size: ");
 
-int[] result = GetArray(sizeArray);
-PrintArray(result);
+int a = Prompt("type number of array: ");
+int[] randomArray = new int[a];
 
-Console.Write($"\n чётных чисел в массиве: {EvenNumbers(result)}");
-
-
-
-int GetNum(string message)
+int Prompt(string message)
 {
-    Console.WriteLine(message);
-    int num = int.Parse(Console.ReadLine());
-    return num;
+    Console.Write(message);
+    int num = int.Parse(Console.ReadLine()!);
+    return num;    
 }
 
-int[] GetArray(int size)
+void GetArray(int array)
 {
-    int[] result = new int[size];
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < array; i++)
     {
-        result[i] = new Random().Next(100, 1000);
-        // Console.Write($"{result[i]} ");
-    }
-    return result;
-}
-
-void PrintArray(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write($"{result[i]} ");
+        if(i == 0)
+        {
+            Console.Write("[");
+        }
+        randomArray[i] = new Random().Next(100, 1000);
+        Console.Write(randomArray[i]);
+        if (i == array - 1)
+        {
+            Console.Write("]");
+        }
+        if (i != array - 1)
+        {
+            Console.Write(", ");
+        }
     }
 }
 
-int[] EvenNumbers(int[] arr1)
+int evenNumbers(int[] ran)
 {
-    for (int i = 0; i < arr1.Length; i++)
+    int countNumbers = 0;
+    for (int i = 0; i < ran.Length; i++)
     {
-        int evenCount = 0;
-        if (arr1[i] % 2 == 0)
-        evenCount += 1;
-        return evenCount;
+        if (i % 2 == 0)
+        countNumbers += 1;   
     }
+    return countNumbers;
 }
 
-
-//---------------------------------------------------------------
-
-// Console.Write("Введите количество элементов массива: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// int[] randomArray = new int[a];
-
-// void mas(int a)
-// {
-//     for (int i = 0; i < a; i++)
-//     {
-//         randomArray[i] = new Random().Next(99, 999);
-//         Console.Write(randomArray[i] + " ");
-//     }
-
-// }
-
-// int kol(int[] randomArray)
-// {
-//     int kol = 0;
-//     for (int i = 0; i < randomArray.Length; i++)
-//     {
-//         if (randomArray[i] % 2 == 0)
-//             kol = kol + 1;
-//     }
-//     return kol;
-// }
-
-// mas(a);
-// Console.Write($"\nКоличество чётных чисел в массиве: {kol(randomArray)}");
-
-
-
-
-
-
-
+GetArray(a);
+int countNumbers = evenNumbers(randomArray);
+Console.WriteLine(" -> " + countNumbers);
 
 
 
