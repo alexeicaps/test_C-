@@ -36,13 +36,13 @@ void GetArray(int array)
 
 int evenNumbers(int[] ran)
 {
-    int countNumbers = 0;
+    int countNum = 0;
     for (int i = 0; i < ran.Length; i++)
     {
         if (i % 2 == 0)
-        countNumbers += 1;   
+        countNum += 1;   
     }
-    return countNumbers;
+    return countNum;
 }
 
 GetArray(a);

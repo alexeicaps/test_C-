@@ -8,8 +8,18 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
+int a = Prompt("type number of array: ");
+int[] array = new int[a];
 
-int[] array = new int[123];
+
+
+int Prompt(string message)
+{
+    Console.Write(message);
+    int num = int.Parse(Console.ReadLine()!);
+    return num;    
+}
+
 
 int[] FillArray(int[] arr)
 {
@@ -21,17 +31,20 @@ int[] FillArray(int[] arr)
     return arr;
 }
 
-int[] rangeDigits(int[] arr)
+int rangeDigits(int[] arr)
 {
-    int[] resultArray = new int[123];
-    foreach (int el in arr)
+    int countNumbers = 0;
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (el > 10 || el < 99) resultArray[] += el;
+        if (i > 10 && i < 99)
+        {
+            countNumbers += 1;
+        }
     }
-    return resultArray;
+    return countNumbers;
 }
 
 
 FillArray(array);
-int[] res = rangeDigits(FillArray(array));
-Console.WriteLine(res);
+int res = rangeDigits(array);
+Console.WriteLine(" -> " + res);
