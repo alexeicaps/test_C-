@@ -58,12 +58,24 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
+int sizeArray = Prompt("Введите длину массива: ");
+int min = Prompt("Введите минимальное значение диапазона для элементов массива: ");
+int max = Prompt("Введите максимальное значение диапазона для элементов массива: ");
 
-int[] array = GetArray(12, -9, 10);
+int[] array = GetArray(sizeArray, min, max);
+
+
+int Prompt(string message)
+{
+    Console.Write(message);
+    int num = int.Parse(Console.ReadLine()!);
+    return num;
+}
+
 
 int[] GetArray(int size, int minValue, int maxValue)
 {
-    int[]result = new int[size];
+    int[] result = new int[size];
     for (int i = 0; i < size; i++)
     {
         result[i] = new Random().Next(minValue, maxValue);
@@ -72,12 +84,22 @@ int[] GetArray(int size, int minValue, int maxValue)
     return result;
 }
 
+int oddNumbers(int[] arr)
+{
+    int sumElements = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i % 2 != 0)
+        sumElements = sumElements + arr[i];
+    }
+    return sumElements;
+}
+
+int result = oddNumbers(array);
+Console.WriteLine(" -> " + result);
 
 
-// int Prompt(string message)
-// {
-//     Console.Write(message);
-//     int num = int.Parse(Console.ReadLine()!);
-//     return num;
-// }
+
+
+// ==============================================
 
