@@ -18,7 +18,7 @@ Console.WriteLine($"\nсумма положительных чисел = {resSum
 int GetNum(string message)
 {
     Console.WriteLine(message);
-    int num = int.Parse(Console.ReadLine());
+    int num = int.Parse(Console.ReadLine()!);
     return num;
 }
 
