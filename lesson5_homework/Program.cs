@@ -58,12 +58,52 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int sizeArray = Prompt("Введите длину массива: ");
-int min = Prompt("Введите минимальное значение диапазона для элементов массива: ");
-int max = Prompt("Введите максимальное значение диапазона для элементов массива: ");
+// int sizeArray = Prompt("Введите длину массива: ");
+// int min = Prompt("Введите минимальное значение диапазона для элементов массива: ");
+// int max = Prompt("Введите максимальное значение диапазона для элементов массива: ");
 
-int[] array = GetArray(sizeArray, min, max);
+// int[] array = GetArray(sizeArray, min, max);
 
+
+// int Prompt(string message)
+// {
+//     Console.Write(message);
+//     int num = int.Parse(Console.ReadLine()!);
+//     return num;
+// }
+
+
+// int[] GetArray(int size, int minValue, int maxValue)
+// {
+//     int[] result = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         result[i] = new Random().Next(minValue, maxValue);
+//         Console.Write($"{result[i]} ");
+//     }
+//     return result;
+// }
+
+// int oddNumbers(int[] arr)
+// {
+//     int sumElements = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (i % 2 != 0)
+//         sumElements = sumElements + arr[i];
+//     }
+//     return sumElements;
+// }
+
+// int result = oddNumbers(array);
+// Console.WriteLine(" -> " + result);
+
+
+// ==============================================
+
+// Задача 38: Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+// [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
 int Prompt(string message)
 {
@@ -73,33 +113,69 @@ int Prompt(string message)
 }
 
 
-int[] GetArray(int size, int minValue, int maxValue)
-{
-    int[] result = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        result[i] = new Random().Next(minValue, maxValue);
-        Console.Write($"{result[i]} ");
-    }
-    return result;
-}
 
-int oddNumbers(int[] arr)
+int a = Prompt("Введите количество элементов: ");
+GetArray(a);
+
+
+
+void GetArray(double[] arr)
 {
-    int sumElements = 0;
+    double[] rand = new double[0];
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i % 2 != 0)
-        sumElements = sumElements + arr[i];
+        rand[i] = new Random().NextDouble();
+        Console.Write($"{rand[i]}");
     }
-    return sumElements;
 }
 
-int result = oddNumbers(array);
-Console.WriteLine(" -> " + result);
+
+
+double[] Difference(double[] ran)
+{
+    double minValue = 0;
+    double maxValue = 0;
+    int i = 1;
+    while (i < ran.Length )
+    {
+        if (minValue )
+    }
+}
 
 
 
+// ----------------------------------------
 
-// ==============================================
+// Console.Write("Введите количество элементов массива: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// double[] randomArray = new double[a];
 
+// void mas(int a)
+// {
+// Random rand = new Random();
+// for (int i = 0; i < a; i++)
+// {
+// randomArray[i] = rand.NextDouble();
+// Console.Write($"{randomArray[i]:F2} ");
+// }
+
+// }
+
+// double raz(double[] randomArray)
+// {
+// double min = randomArray[0];
+// double max = randomArray[0];
+// int i = 1;
+// while (i < randomArray.Length)
+// {
+// if (max<randomArray[i])
+// max = randomArray[i];
+// if (min>randomArray[i])
+// min = randomArray[i];
+// i = i + 1;
+// }
+// return max-min;
+// }
+
+// mas(a);
+// Console.Write($"\nРазница между максимальным и минимальным элементов массива: {raz(randomArray):F2}");
