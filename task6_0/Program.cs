@@ -4,14 +4,13 @@
 // [6 7 3 6] -> [6 3 7 6]
 
 
-int[] array = GetArray(11, 0, 15);
+int[] array = GetArray(10, 0, 15);
 Console.Write(String.Join(" ", array));
 ReverseArray1(array);
 Console.WriteLine();
 Console.Write(String.Join(" ", array));
 int[] reverseArray = ReverseArray2(array);
-//Console.Write(String.Join(" ", reverseArray));
-
+Console.Write(String.Join(" ", reverseArray));
 
 
 int[] GetArray(int size, int min, int max)
