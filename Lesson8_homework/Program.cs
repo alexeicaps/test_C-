@@ -65,9 +65,8 @@
 // Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
 
-// int[,] array = GetArray(4, 6);
+// int[,] array = GetArray(4, 4);
 // PrintArray(array);
-
 
 
 // int[,] GetArray(int m, int n)
@@ -95,92 +94,37 @@
 //     }
 // }
 
-// int GetSumEveryRows(int[,] array, int i)
+
+// void GetRowsNumber(int[,] array)
 // {
 //     int row = 0;
+//     int sum = 0;
 //     int minSum = 0;
-
+//     for (int i = 0; i < array.GetLength(0); i++)
 //     {
-//         int[,] arraySum = new int[array.GetLength(1), 0];
-//         for (int i = 0; i < array.GetLength(1); i++)
+//         sum = 0;
+//         for (int j = 0; j < array.GetLength(1); j++)
 //         {
-//             int result = 0;
-//             for (int j = 0; j < array.GetLength(0); j++)
+//             sum = sum + array[i, j];
 //             {
-//                 result = result + array.Length[j];
+//                 if (i == 0)
+//                 minSum = sum;
 //             }
-//             return result;
 //         }
-//         return arraySum;
+//         Console.Write($"{sum} ");
+//         if (sum < minSum)
+//         {
+//             minSum = sum;
+//             row = i + 1;
+
+//         }
 //     }
+//     Console.WriteLine();
+//     Console.WriteLine($"{minSum} -> {row}");
 // }
 
-// GetSumEveryRows(array);
+// GetRowsNumber(array);
 
-
-
-// --------------------------------------------------------------------------
-
-Console.Write("Введите размерность m массива: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите размерность n массива: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[,] randomArray = new int[m, n];
-
-void mas(int m, int n)
-{
-    int i, j;
-    Random rand = new Random();
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            randomArray[i, j] = rand.Next(1, 9);
-        }
-    }
-}
-
-void printm(int[,] array)
-{
-    int i, j;
-    for (i = 0; i < array.GetLength(0); i++)
-    {
-        Console.WriteLine();
-        for (j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($"{array[i, j]} ");
-        }
-        // Console.WriteLine();
-    }
-}
-
-mas(m, n);
-Console.WriteLine("\nИсходный массив: ");
-printm(randomArray);
-
-// Функция, считающая сумму элементов в строке
-int SumLine(int[,] array, int i)
-{
-    int sum = array[i, 0];
-    for (int j = 1; j < array.GetLength(1); j++)
-    {
-        sum += array[i, j];
-    }
-    return sum;
-}
-
-int minSum = 1;
-int sum = SumLine(randomArray, 0);
-for (int i = 1; i < randomArray.GetLength(0); i++)
-{
-    if (sum > SumLine(randomArray, i))
-    {
-        sum = SumLine(randomArray, i);
-        minSum = i + 1;
-    }
-}
-
-Console.WriteLine($"\nСтрока c наименьшей суммой элементов: {minSum}");
 
 
 
@@ -196,6 +140,47 @@ Console.WriteLine($"\nСтрока c наименьшей суммой элем�
 // 18 20
 // 15 18
 
+
+
+Console.Write("Введите размерность m массива: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите размерность n массива: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите размерность k массива: ");
+int k = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите размерность l массива: ");
+int l = Convert.ToInt32(Console.ReadLine());
+int[,] randomArray1 = new int[m, n];
+int[,] randomArray2 = new int[k, l];
+mas(m, n);
+Console.WriteLine("\nИсходный массив: ");
+PrintArray($"{PrintArray} -");
+
+
+int[,] GetArray(int m, int n)
+{
+    int[,] array = new int[m, n];
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            array[i, j] = new Random().Next(0, 10);
+        }
+    }
+    return array;
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
 
 
 
