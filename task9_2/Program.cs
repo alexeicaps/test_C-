@@ -5,8 +5,10 @@
 int digitsSum(int number)
 {
     if(number==0) return 0;
-    return number % 10 + digitsSum(number/10) * 2;
+    return number % 10 + digitsSum(number/10);
 }
 
-int sum = digitsSum(453);
+Console.WriteLine("type number: ");
+int number = int.Parse(Console.ReadLine()!);
+int sum = digitsSum(number);
 Console.WriteLine(sum);
