@@ -7,10 +7,10 @@ string FillNum(int m, int n)
 {
     if (m < n)
     {
-        return m + "," + FillNum(m + 1, n);
+        return m + ", " + FillNum(m + 1, n);
     }
     else
         return "";
 }
 
-Console.WriteLine(FillNum(1, 5));
+Console.WriteLine(FillNum(1, 6));
