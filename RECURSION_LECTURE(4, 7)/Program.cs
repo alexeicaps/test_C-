@@ -156,13 +156,13 @@
 // -------------------------------------------------------------------------
 // --------find directory----------
 
-string path = "D:/GeekBrains/C#/Seminars/test_C-/task0";
-DirectoryInfo di = new DirectoryInfo(path);
-Console.WriteLine(di.CreationTime);
+// string path = "D:/GeekBrains/C#/Seminars/test_C-/task0";
+// DirectoryInfo di = new DirectoryInfo(path);
+// Console.WriteLine(di.CreationTime);
 
-FileInfo[] fi = di.GetFiles();
+// FileInfo[] fi = di.GetFiles();
 
-for (int i = 0; i < fi.Length; i++)
-{
-    Console.WriteLine(fi[i].Name);
-}
+// for (int i = 0; i < fi.Length; i++)
+// {
+//     Console.WriteLine(fi[i].Name);
+// }

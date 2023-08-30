@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Alexei notebook\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\GeekBrains\\3. Знакомство с языками программирования\\Семинары\\C#\\task0\\task0.csproj",
+      "projectUniqueName": "D:\\GeekBrains\\C#\\Seminars\\test_C-\\task0\\task0.csproj",
       "projectName": "task0",
-      "projectPath": "F:\\GeekBrains\\3. Знакомство с языками программирования\\Семинары\\C#\\task0\\task0.csproj",
-      "packagesPath": "C:\\Users\\Alexei notebook\\.nuget\\packages\\",
-      "outputPath": "F:\\GeekBrains\\3. Знакомство с языками программирования\\Семинары\\C#\\task0\\obj\\",
+      "projectPath": "D:\\GeekBrains\\C#\\Seminars\\test_C-\\task0\\task0.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\GeekBrains\\C#\\Seminars\\test_C-\\task0\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alexei notebook\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
